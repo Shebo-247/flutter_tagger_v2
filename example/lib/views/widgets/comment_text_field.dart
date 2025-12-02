@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:example/models/user.dart';
 import 'package:example/views/widgets/custom_text_field.dart';
-import 'package:fluttertagger/fluttertagger.dart';
+import 'package:flutter_tagger_v2/flutter_tagger_v2.dart';
 
 class CommentTextField extends StatelessWidget {
   final FlutterTaggerController controller;

@@ -6,16 +6,16 @@ publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 version: 1.0.0+1
 
 environment:
-  sdk: ">=2.17.1 <=4.0.0"
+  sdk: ^3.8.1
 
 dependencies:
   flutter:
     sdk: flutter
 
   cupertino_icons: ^1.0.2
-  url_launcher: ^6.1.6
+  url_launcher: ^6.3.2
   linkify: ^4.1.0
-  fluttertagger:
+  flutter_tagger_v2:
     path: ../
 
 dev_dependencies:

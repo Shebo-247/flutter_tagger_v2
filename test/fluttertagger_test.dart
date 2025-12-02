@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:fluttertagger/fluttertagger.dart';
+import 'package:flutter_tagger_v2/flutter_tagger_v2.dart';
 
 Widget _buildTestWidget({
   required FlutterTaggerController controller,
@@ -11,7 +11,7 @@ Widget _buildTestWidget({
   return MaterialApp(
     home: Scaffold(
       body: Center(
-        child: FlutterTagger(
+        child: FlutterTaggerV2(
           triggerStrategy: triggerStrategy,
           overlay: Container(
             height: 100,
@@ -48,7 +48,7 @@ void main() {
 
     testWidgets('initializes without errors', (tester) async {
       await tester.pumpWidget(_buildTestWidget(controller: controller));
-      expect(find.byType(FlutterTagger), findsOneWidget);
+      expect(find.byType(FlutterTaggerV2), findsOneWidget);
       expect(find.byType(TextField), findsOneWidget);
     });
 
@@ -63,7 +63,7 @@ void main() {
       final testWidget = MaterialApp(
         home: Scaffold(
           body: Center(
-            child: FlutterTagger(
+            child: FlutterTaggerV2(
               overlay: Container(
                 height: 100,
                 color: Colors.grey,
@@ -243,7 +243,7 @@ void main() {
 
       final testWidget = MaterialApp(
         home: Scaffold(
-          body: FlutterTagger(
+          body: FlutterTaggerV2(
             overlay: overlayContent,
             controller: controller,
             onSearch: onSearch,
@@ -302,7 +302,7 @@ void main() {
 
       final testWidget = MaterialApp(
         home: Scaffold(
-          body: FlutterTagger(
+          body: FlutterTaggerV2(
             overlay: overlayContent,
             controller: controller,
             onSearch: onSearch,

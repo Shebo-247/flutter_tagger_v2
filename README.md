@@ -1,4 +1,4 @@
-## FlutterTagger
+## Flutter Tagger V2
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/crazelu/fluttertagger/main/assets/fluttertagger_banner.svg" max-height="100" alt="FlutterTagger" />
@@ -20,19 +20,19 @@ In the `pubspec.yaml` of your flutter project, add the following dependency:
 
 ```yaml
 dependencies:
-  fluttertagger: ^2.3.1
+  flutter_tagger_v2: ^1.0.0
 ```
 
 ## Import the package in your project 📥
 
 ```dart
-import 'package:fluttertagger/fluttertagger.dart';
+import 'package:flutter_tagger_v2/flutter_tagger_v2.dart';
 ```
 
 ## Usage 🏗️
 
 ```dart
-FlutterTagger(
+FlutterTaggerV2(
           controller: flutterTaggerController,
           onSearch: (query, triggerCharacter) {
               //perform search
@@ -78,7 +78,7 @@ FlutterTagger(
 Here's how trigger a search by updating the controller directly instead of typing into a keyboard:
 
 ```dart
-FlutterTagger(
+FlutterTaggerV2(
           controller: flutterTaggerController,
           onSearch: (query, triggerCharacter) {
               //perform search
@@ -129,7 +129,7 @@ FlutterTagger(
         )
 ```
 
-Explore detailed example demo [here](https://github.com/Crazelu/fluttertagger/tree/main/example).
+Explore detailed example demo [here](https://github.com/Shebo-247/flutter_tagger_v2/tree/main/example).
 
 ## Demo 📷
 
@@ -139,5 +139,5 @@ Explore detailed example demo [here](https://github.com/Crazelu/fluttertagger/tr
 
 Feel free to contribute to this project.
 
-If you find a bug or want a feature, but don't know how to fix/implement it, please fill an [issue](https://github.com/Crazelu/fluttertagger/issues).  
-If you fixed a bug or implemented a feature, please send a [pull request](https://github.com/Crazelu/fluttertagger/pulls).
+If you find a bug or want a feature, but don't know how to fix/implement it, please fill an [issue](https://github.com/Shebo-247/flutter_tagger_v2/issues).  
+If you fixed a bug or implemented a feature, please send a [pull request](https://github.com/Shebo-247/flutter_tagger_v2/pulls).

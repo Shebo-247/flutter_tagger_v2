@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:example/models/user.dart';
 import 'package:example/views/view_models/search_view_model.dart';
 import 'package:example/views/widgets/loading_indicator.dart';
-import 'package:fluttertagger/fluttertagger.dart';
+import 'package:flutter_tagger_v2/flutter_tagger_v2.dart';
 
 class UserListView extends StatelessWidget {
   const UserListView({

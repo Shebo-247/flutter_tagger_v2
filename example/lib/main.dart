@@ -5,7 +5,7 @@ import 'package:example/views/view_models/home_view_model.dart';
 import 'package:example/views/view_models/search_view_model.dart';
 import 'package:example/views/widgets/comment_text_field.dart';
 import 'package:example/views/widgets/post_widget.dart';
-import 'package:fluttertagger/fluttertagger.dart';
+import 'package:flutter_tagger_v2/flutter_tagger_v2.dart';
 
 void main() {
   runApp(const MyApp());
@@ -91,7 +91,7 @@ class _HomeViewState extends State<HomeView> with TickerProviderStateMixin {
           backgroundColor: Colors.redAccent,
           title: const Text("The Squad"),
         ),
-        bottomNavigationBar: FlutterTagger(
+        bottomNavigationBar: FlutterTaggerV2(
           triggerStrategy: TriggerStrategy.eager,
           controller: _controller,
           animationController: _animationController,

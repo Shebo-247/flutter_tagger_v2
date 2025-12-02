@@ -1,4 +1,4 @@
-import 'package:fluttertagger/src/tagged_text.dart';
+import 'package:flutter_tagger_v2/src/tagged_text.dart';
 
 class _TrieNode {
   final Map<String, _TrieNode> children;

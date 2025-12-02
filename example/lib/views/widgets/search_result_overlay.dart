@@ -2,7 +2,7 @@ import 'package:example/views/view_models/search_view_model.dart';
 import 'package:example/views/widgets/hashtag_list_view.dart';
 import 'package:example/views/widgets/user_list_view.dart';
 import 'package:flutter/material.dart';
-import 'package:fluttertagger/fluttertagger.dart';
+import 'package:flutter_tagger_v2/flutter_tagger_v2.dart';
 
 class SearchResultOverlay extends StatelessWidget {
   const SearchResultOverlay({
