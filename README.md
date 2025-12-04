@@ -1,18 +1,18 @@
 ## Flutter Tagger V2
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/crazelu/fluttertagger/main/assets/fluttertagger_banner.svg" max-height="100" alt="FlutterTagger" />
+  <img src="https://raw.githubusercontent.com/crazelu/fluttertagger/main/assets/fluttertagger_banner.svg" max-height="100" alt="FlutterTaggerV2" />
 </p>
 
 <p align="center">
-  <a href="https://pub.dev/packages/fluttertagger/score"><img src="https://img.shields.io/pub/likes/fluttertagger" alt="likes"></a>
-  <a href="https://pub.dev/packages/fluttertagger/score"><img src="https://img.shields.io/pub/popularity/fluttertagger" alt="popularity"></a>
-  <a href="https://pub.dev/packages/fluttertagger/score"><img src="https://img.shields.io/pub/points/fluttertagger" alt="pub points"></a>
-  <a href="https://codecov.io/gh/crazelu/fluttertagger"><img src="https://codecov.io/gh/crazelu/fluttertagger/graph/badge.svg" alt="code coverage"/></a>
+  <a href="https://pub.dev/packages/flutter_tagger_v2/score"><img src="https://img.shields.io/pub/likes/flutter_tagger_v2" alt="likes"></a>
+  <a href="https://pub.dev/packages/flutter_tagger_v2/score"><img src="https://img.shields.io/pub/popularity/flutter_tagger_v2" alt="popularity"></a>
+  <a href="https://pub.dev/packages/flutter_tagger_v2/score"><img src="https://img.shields.io/pub/points/flutter_tagger_v2" alt="pub points"></a>
+  <!-- <a href="https://codecov.io/gh/crazelu/fluttertagger"><img src="https://codecov.io/gh/crazelu/fluttertagger/graph/badge.svg" alt="code coverage"/></a> -->
 </p>
 
 
-FlutterTagger is a Flutter package that allows for the extension of TextFields to provide tagging capabilities. A typical use case is in social apps where user mentions and hashtags features are desired.
+FlutterTaggerV2 is a Flutter package that allows for the extension of TextFields to provide tagging capabilities. A typical use case is in social apps where user mentions and hashtags features are desired.
 
 ## Install 🚀
 
