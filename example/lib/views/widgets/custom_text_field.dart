@@ -34,27 +34,19 @@ class CustomTextField extends StatelessWidget {
           fontSize: 14,
         ),
         border: OutlineInputBorder(
-          borderSide: const BorderSide(
-            color: Colors.pinkAccent,
-          ),
+          borderSide: const BorderSide(color: Colors.pinkAccent),
           borderRadius: BorderRadius.circular(30),
         ),
         enabledBorder: OutlineInputBorder(
-          borderSide: const BorderSide(
-            color: Colors.pinkAccent,
-          ),
+          borderSide: const BorderSide(color: Colors.pinkAccent),
           borderRadius: BorderRadius.circular(30),
         ),
         disabledBorder: OutlineInputBorder(
-          borderSide: const BorderSide(
-            color: Colors.pinkAccent,
-          ),
+          borderSide: const BorderSide(color: Colors.pinkAccent),
           borderRadius: BorderRadius.circular(30),
         ),
         focusedBorder: OutlineInputBorder(
-          borderSide: const BorderSide(
-            color: Colors.pinkAccent,
-          ),
+          borderSide: const BorderSide(color: Colors.pinkAccent),
           borderRadius: BorderRadius.circular(30),
         ),
       ),

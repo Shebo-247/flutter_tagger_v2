@@ -18,15 +18,7 @@ class CommentTextField extends StatelessWidget {
     required this.controller,
     required this.onSend,
     required this.insets,
-    this.emojis = const [
-      '😍',
-      '😜',
-      '👍',
-      '🤞',
-      '🙌',
-      '😉',
-      '🙏',
-    ],
+    this.emojis = const ['😍', '😜', '👍', '🤞', '🙌', '😉', '🙏'],
     this.focusNode,
     this.containerKey,
   }) : super(key: key);
@@ -39,10 +31,7 @@ class CommentTextField extends StatelessWidget {
       constraints: BoxConstraints(
         maxHeight: insets == EdgeInsets.zero ? 158 : 158 + insets.bottom,
       ),
-      padding: const EdgeInsets.symmetric(
-        vertical: 20,
-        horizontal: 10,
-      ),
+      padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 10),
       color: Colors.white,
       child: Column(
         mainAxisAlignment: insets == EdgeInsets.zero
@@ -63,9 +52,12 @@ class CommentTextField extends StatelessWidget {
                       onTap: (emoji) {
                         final baseOffset = controller.selection.baseOffset;
                         final cursorPosition = controller.cursorPosition;
-                        final substring = controller.formattedText
-                            .substring(0, cursorPosition);
-                        final newText = substring +
+                        final substring = controller.formattedText.substring(
+                          0,
+                          cursorPosition,
+                        );
+                        final newText =
+                            substring +
                             emoji +
                             controller.formattedText.substring(cursorPosition);
 
@@ -76,7 +68,7 @@ class CommentTextField extends StatelessWidget {
                           TextPosition(offset: baseOffset + emoji.length),
                         );
                       },
-                    )
+                    ),
                 ],
               ),
             ),
@@ -104,15 +96,12 @@ class CommentTextField extends StatelessWidget {
                   hint: "Type something fun...",
                   suffix: IconButton(
                     onPressed: onSend,
-                    icon: const Icon(
-                      Icons.send,
-                      color: Colors.redAccent,
-                    ),
+                    icon: const Icon(Icons.send, color: Colors.redAccent),
                   ),
                 ),
               ),
             ],
-          )
+          ),
         ],
       ),
     );
@@ -135,12 +124,7 @@ class EmojiIcon extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () => onTap(emoji),
-      child: Text(
-        emoji,
-        style: TextStyle(
-          fontSize: fontSize,
-        ),
-      ),
+      child: Text(emoji, style: TextStyle(fontSize: fontSize)),
     );
   }
 }

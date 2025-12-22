@@ -5,11 +5,7 @@ class Post {
   final User poster;
   final String time;
 
-  Post({
-    required this.caption,
-    required this.poster,
-    required this.time,
-  });
+  Post({required this.caption, required this.poster, required this.time});
 
   static List<Post> posts = [
     Post(

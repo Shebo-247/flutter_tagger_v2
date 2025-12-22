@@ -30,10 +30,10 @@ class CustomText extends StatelessWidget {
     this.textColor,
     this.onParentPressed,
     this.onUserTagPressed,
-  })  : _suffix = "...$suffix",
-        _text = text.trim(),
-        _fontSize = fontSize ?? 14,
-        super(key: key);
+  }) : _suffix = "...$suffix",
+       _text = text.trim(),
+       _fontSize = fontSize ?? 14,
+       super(key: key);
 
   final double _fontSize;
 
@@ -66,12 +66,7 @@ class CustomText extends StatelessWidget {
       }
 
       if (span.text!.length > _maxTextLength) {
-        _spans.add(
-          _copyWith(
-            span,
-            text: text.substring(0, _maxTextLength),
-          ),
-        );
+        _spans.add(_copyWith(span, text: text.substring(0, _maxTextLength)));
       } else {
         _spans.add(span);
       }
@@ -104,10 +99,7 @@ class CustomText extends StatelessWidget {
   TextSpan get _parsedTextSpan {
     final elements = linkify(
       _text,
-      options: const LinkifyOptions(
-        removeWww: true,
-        looseUrl: true,
-      ),
+      options: const LinkifyOptions(removeWww: true, looseUrl: true),
       linkifiers: [
         const UrlLinkifier(),
         CustomUserTagLinkifier(),
@@ -209,9 +201,7 @@ class CustomText extends StatelessWidget {
         recognizer: TapGestureRecognizer()..onTap = onParentPressed,
       );
     }
-    return RichText(
-      text: child,
-    );
+    return RichText(text: child);
   }
 }
 
@@ -243,10 +233,7 @@ class CustomUserTagLinkifier extends Linkifier {
             final blob = match.group(2)!.split("#");
             list.add(
               CustomUserTagElement(
-                userId: blob.first.replaceAll(
-                  "@",
-                  "",
-                ),
+                userId: blob.first.replaceAll("@", ""),
                 name: "@${blob[1]}",
               ),
             );
@@ -269,7 +256,7 @@ class CustomUserTagElement extends LinkableElement {
   final String userId;
   final String name;
   CustomUserTagElement({required this.userId, required this.name})
-      : super(userId, name);
+    : super(userId, name);
 
   @override
   String toString() {
@@ -316,11 +303,7 @@ class HashtagLinkifier extends Linkifier {
 
           if (match.group(2)?.isNotEmpty == true) {
             final blob = match.group(2)!.split("#");
-            list.add(
-              HashtagElement(
-                title: "#${blob[blob.length - 2]}",
-              ),
-            );
+            list.add(HashtagElement(title: "#${blob[blob.length - 2]}"));
           }
 
           if (text.isNotEmpty) {

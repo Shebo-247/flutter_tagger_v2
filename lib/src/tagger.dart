@@ -246,8 +246,9 @@ class _FlutterTaggerV2State extends State<FlutterTaggerV2> {
     int start = startIndex;
 
     final nestedWords = text.splitWithDelim(_triggerCharactersPattern);
-    bool startsWithTrigger =
-        text.isNotEmpty && triggerCharacters.contains(text[0]) && nestedWords.first.isNotEmpty;
+    bool startsWithTrigger = text.isNotEmpty &&
+        triggerCharacters.contains(text[0]) &&
+        nestedWords.first.isNotEmpty;
 
     String triggerChar = "";
     int triggerCharIndex = 0;
@@ -450,7 +451,9 @@ class _FlutterTaggerV2State extends State<FlutterTaggerV2> {
         return false;
       }
       final position = controller.selection.base.offset - 1;
-      if (position >= 0 && position < text.length && triggerCharacters.contains(text[position])) {
+      if (position >= 0 &&
+          position < text.length &&
+          triggerCharacters.contains(text[position])) {
         _shouldSearch = true;
         return false;
       }
@@ -674,7 +677,9 @@ class _FlutterTaggerV2State extends State<FlutterTaggerV2> {
       // as the later part of this listener which does that is unreachable
       // when the call to _tagListener is deffered.
       int position = currentCursorPosition - 1;
-      if (position >= 0 && position < text.length && triggerCharacters.contains(text[position])) {
+      if (position >= 0 &&
+          position < text.length &&
+          triggerCharacters.contains(text[position])) {
         _shouldSearch = true;
         _currentTriggerChar = text[position];
         if (widget.triggerStrategy == TriggerStrategy.eager) {
@@ -716,7 +721,9 @@ class _FlutterTaggerV2State extends State<FlutterTaggerV2> {
     }
 
     if (_lastCachedText == text) {
-      if (position >= 0 && position < text.length && triggerCharacters.contains(text[position])) {
+      if (position >= 0 &&
+          position < text.length &&
+          triggerCharacters.contains(text[position])) {
         _shouldSearch = true;
         _currentTriggerChar = text[position];
         if (widget.triggerStrategy == TriggerStrategy.eager) {
@@ -739,7 +746,9 @@ class _FlutterTaggerV2State extends State<FlutterTaggerV2> {
       final hideOverlay = !_backtrackAndSearch();
       if (hideOverlay) _shouldHideOverlay(true);
 
-      if (position < 0 || position >= text.length || !triggerCharacters.contains(text[position])) {
+      if (position < 0 ||
+          position >= text.length ||
+          !triggerCharacters.contains(text[position])) {
         _recomputeTags(oldCachedText, text, position);
         _onFormattedTextChanged();
         return;
@@ -748,7 +757,9 @@ class _FlutterTaggerV2State extends State<FlutterTaggerV2> {
 
     _lastCachedText = text;
 
-    if (position >= 0 && position < text.length && triggerCharacters.contains(text[position])) {
+    if (position >= 0 &&
+        position < text.length &&
+        triggerCharacters.contains(text[position])) {
       _shouldSearch = true;
       _currentTriggerChar = text[position];
       if (widget.triggerStrategy == TriggerStrategy.eager) {
@@ -759,7 +770,9 @@ class _FlutterTaggerV2State extends State<FlutterTaggerV2> {
       return;
     }
 
-    if (position >= 0 && position < text.length && !_searchRegexPattern.hasMatch(text[position])) {
+    if (position >= 0 &&
+        position < text.length &&
+        !_searchRegexPattern.hasMatch(text[position])) {
       _shouldSearch = false;
     }
 
@@ -1143,7 +1156,8 @@ class FlutterTaggerController extends TextEditingController {
     int start = startIndex;
 
     final nestedWords = text.splitWithDelim(_triggerCharactersPattern);
-    bool startsWithTrigger = text.isNotEmpty && text[0].contains(_triggerCharactersPattern) &&
+    bool startsWithTrigger = text.isNotEmpty &&
+        text[0].contains(_triggerCharactersPattern) &&
         nestedWords.first.isNotEmpty;
 
     String triggerChar = "";
@@ -1243,7 +1257,8 @@ class FlutterTaggerController extends TextEditingController {
     int start = startIndex;
 
     final nestedWords = text.splitWithDelim(_triggerCharactersPattern);
-    bool startsWithTrigger = text.isNotEmpty && text[0].contains(_triggerCharactersPattern) &&
+    bool startsWithTrigger = text.isNotEmpty &&
+        text[0].contains(_triggerCharactersPattern) &&
         nestedWords.first.isNotEmpty;
 
     String triggerChar = "";

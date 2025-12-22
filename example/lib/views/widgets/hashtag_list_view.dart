@@ -61,10 +61,7 @@ class HashtagListView extends StatelessWidget {
                         ],
                       ),
                       if (loading && hashtags.isEmpty) ...{
-                        const Center(
-                          heightFactor: 8,
-                          child: LoadingWidget(),
-                        )
+                        const Center(heightFactor: 8, child: LoadingWidget()),
                       },
                       if (!loading && hashtags.isEmpty)
                         const Center(
@@ -85,7 +82,8 @@ class HashtagListView extends StatelessWidget {
                                   decoration: BoxDecoration(
                                     shape: BoxShape.circle,
                                     border: Border.all(
-                                        color: Colors.lightBlueAccent),
+                                      color: Colors.lightBlueAccent,
+                                    ),
                                   ),
                                   alignment: Alignment.center,
                                   child: const Text(

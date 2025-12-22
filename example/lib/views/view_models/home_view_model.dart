@@ -9,11 +9,7 @@ class HomeViewModel {
   void addPost(String caption) {
     if (caption.isEmpty) return;
 
-    final post = Post(
-      caption: caption,
-      poster: User.anon(),
-      time: "now",
-    );
+    final post = Post(caption: caption, poster: User.anon(), time: "now");
     final postsCopy = _posts.value;
     postsCopy.add(post);
     _posts.value = [...postsCopy];

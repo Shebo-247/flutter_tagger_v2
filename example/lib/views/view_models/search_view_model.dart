@@ -16,8 +16,9 @@ class SearchViewModel {
   late final ValueNotifier<bool> _loading = ValueNotifier(false);
   ValueNotifier<bool> get loading => _loading;
 
-  late final ValueNotifier<SearchResultView> _activeView =
-      ValueNotifier(SearchResultView.none);
+  late final ValueNotifier<SearchResultView> _activeView = ValueNotifier(
+    SearchResultView.none,
+  );
   ValueNotifier<SearchResultView> get activeView => _activeView;
 
   void _setLoading(bool val) {
